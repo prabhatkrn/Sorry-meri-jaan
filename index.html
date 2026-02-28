@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Private For My Love ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+  background: linear-gradient(to bottom right, #ff9a9e, #fad0c4);
+  color: white;
+  text-align: center;
+}
+
+/* Password Screen */
+#lockScreen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, #ff758c, #ff7eb3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+input {
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 20px;
+  border: none;
+  text-align: center;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#mainContent {
+  display: none;
+}
+
+.container {
+  margin-top: 15%;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+#typing {
+  font-size: 20px;
+  max-width: 700px;
+  margin: 20px auto;
+  white-space: pre-line;
+}
+
+/* Floating */
+.floating {
+  position: absolute;
+  animation: float linear infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh); opacity: 1; }
+  100% { transform: translateY(-10vh); opacity: 0; }
+}
+
+/* Heart burst */
+.heart {
+  position: absolute;
+  font-size: 20px;
+  animation: burst 1s ease-out forwards;
+}
+
+@keyframes burst {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: translateY(-100px) scale(2); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🔐 Password Screen -->
+<div id="lockScreen">
+  <h2>Enter Password ❤️</h2>
+  <input type="password" id="passwordInput" placeholder="Enter password">
+  <button onclick="checkPassword()">Unlock 💌</button>
+  <p id="error" style="color:yellow;"></p>
+</div>
+
+<!-- 🎵 Background Music -->
+<audio id="bgMusic" loop>
+  <source src="lonely.mp3" type="audio/mp3">
+</audio>
+
+<!-- 💖 Main Content -->
+<div id="mainContent">
+  <div class="container">
+    <h1>Sorry My Love, meri jaan ❤️</h1>
+    <div id="typing"></div>
+    <button onclick="yesClicked()">Yes 💖</button>
+    <button id="noBtn" onmouseover="moveNo()">No 😢</button>
+  </div>
+</div>
+
+<script>
+
+/* 🔐 Change Password Here */
+const correctPassword = "14052007";
+
+function checkPassword() {
+  const input = document.getElementById("passwordInput").value;
+  if (input === correctPassword) {
+    document.getElementById("lockScreen").style.display = "none";
+    document.getElementById("mainContent").style.display = "block";
+    document.getElementById("bgMusic").play();
+    startTyping();
+    startFloating();
+  } else {
+    document.getElementById("error").innerText = "Wrong password 😢";
+  }
+}
+
+/* Typing Animation */
+const text = रात के तीन बजे ये लिख रहा हूं…
+पता है आप सो गई होंगी,
+पर मेरा दिल बहुत दर्द में है।
+
+पर मैं हिम्मत नहीं हारूंगा…
+मुझे हमारा भविष्य चाहिए।
+ID देना बहुत छोटी सी बात है,
+मैंने कोई गुनाह नहीं किया,
+न धोखा दिया,
+न कुछ छिपाऊंगा आपसे।
+
+अगर आपको ये गेम लग रहा है,
+तो चलिए मैं खेल भी रहा हूं…
+पर जब रुनझुन मुझे “jeez” कहती है,
+जब आंटी जो मेरी मां जैसी हैं
+मुझे बेटा कहकर मुस्कुराती हैं,
+क्या वो भी गेम है?
+क्या मां भगवती से आपको मांगना
+मेरे भविष्य के लिए खेल है?
+
+आप बहुत प्यारी हैं…
+बहुत ज्यादा।
+Please bby, मुझे कुछ भी बोल लीजिए,
+पर Janvi को मत बोलिए।
+मुझे किसी पर भरोसा नहीं।
+GC में day one से बोल रहा हूं,
+कोई पहले का game नहीं था।
+
+मैं थोड़ा हल्के दिमाग का हूं,
+पर दिल का सच्चा हूं।
+रौनक को जो बातें बोलीं,
+वो सिर्फ guilt में बोलीं।
+
+You are my past,
+my present,
+and my future.
+अगर कोई और होता,
+तो आज भी होता…
+पर आज आप हो।
+और कल भी आप ही चाहिए।
+
+मैं रोज की लड़ाई नहीं चाहता,
+पर हिम्मत नहीं हारूंगा।
+मुझे आपको अपनी अर्थी तक ले जाना है,
+और अगले जन्म में भी आप ही चाहिए।
+
+मुझे माफ कर दीजिए मेरी जान।
+अब मुझे कोई guilt नहीं,
+क्योंकि आप हो।
+आपने मुझे बदल दिया।
+अगर मैं ग़म में था,
+तो आपने उसे अपने प्यार से भर दिया।
+
+सच बोलूं…
+अगर आप नहीं होतीं,
+तो शायद मैं जीना नहीं चाहता।
+अब मैं सिर्फ आपके लिए जिऊंगा,
+सपने देखूंगा,
+उन्हें हकीकत बनाऊंगा,
+आपके साथ परिवार बनाऊंगा।
+
+Please bby,
+meri jaan,
+meri Mishti,
+meri malkin…
+अब नहीं लड़ते, है ना?
+
+पास आइए patidev के…
+सब ठीक कर दूंगा।
+आप नहीं आईं तो मुझे नींद नहीं आएगी।
+
+Please…
+aa jao na…
+my love ❤️
+I really love you ❤️`;
+
+let i = 0;
+function startTyping() {
+  function typeWriter() {
+    if (i < text.length) {
+      document.getElementById("typing").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, 50);
+    }
+  }
+  typeWriter();
+}
+
+/* No Button Move */
+function moveNo() {
+  var btn = document.getElementById("noBtn");
+  btn.style.position = "absolute";
+  btn.style.top = Math.random() * window.innerHeight + "px";
+  btn.style.left = Math.random() * window.innerWidth + "px";
+}
+
+/* Yes Click Effect */
+function yesClicked() {
+  alert("Yayyy ❤️ I love you 😘");
+  for (let i = 0; i < 20; i++) {
+    let heart = document.createElement("div");
+    heart.innerHTML = "💖";
+    heart.className = "heart";
+    heart.style.left = (window.innerWidth/2 + Math.random()*100 - 50) + "px";
+    heart.style.top = (window.innerHeight/2) + "px";
+    document.body.appendChild(heart);
+  }
+}
+
+/* Floating items */
+function startFloating() {
+  for (let i = 0; i < 30; i++) {
+    let item = document.createElement("div");
+    item.innerHTML = Math.random() > 0.5 ? "🌸" : "💗";
+    item.className = "floating";
+    item.style.left = Math.random() * 100 + "vw";
+    item.style.animationDuration = (5 + Math.random() * 5) + "s";
+    document.body.appendChild(item);
+  }
+}
+
+</script>
+
+</body>
+</html>
