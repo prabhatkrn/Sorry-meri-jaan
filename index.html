@@ -115,20 +115,23 @@ button {
 <script>
 
 /* 🔐 Change Password Here */
+<script>
 const correctPassword = "14052007";
 
 function checkPassword() {
-  const input = document.getElementById("passwordInput").value;
-  if (input === correctPassword) {
-    document.getElementById("lockScreen").style.display = "none";
-    document.getElementById("mainContent").style.display = "block";
-    document.getElementById("bgMusic").play();
-    startTyping();
-    startFloating();
-  } else {
-    document.getElementById("error").innerText = "Wrong password 😢";
-  }
+    const input = document.getElementById("passwordInput").value;
+
+    if (input === correctPassword) {
+        document.getElementById("lockScreen").style.display = "none";
+        document.getElementById("mainContent").style.display = "block";
+        document.getElementById("bgMusic").play();
+        startTyping();
+        startFloating();
+    } else {
+        alert("Wrong Password 💔");
+    }
 }
+</script>
 
 /* Typing Animation */
 const text = रात के तीन बजे ये लिख रहा हूं…
